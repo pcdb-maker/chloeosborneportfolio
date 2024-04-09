@@ -1,9 +1,10 @@
-.topbar{
+.topbar {
     width: 100%;
     height: 70px;
-    background-color: darkblue;
+    background-color: black;
+    color: darkblue;
     position: fixed;
-    top:0; //This fixes the whitespace being added randomly to the top of the project
-   
-       
+    top: 0;
+    z-index: 3;
+    transition: all 1s ease;
 }

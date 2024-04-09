@@ -13,10 +13,16 @@ function App() {
     <Topbar/>
     <div className="sections">
       <Intro/>
+     
       <Portfolio/>
+      
       <Works/>
+      
       <Testimonials/>
+      
       <Contact/>
+
+    
 
     </div>
     </div>
