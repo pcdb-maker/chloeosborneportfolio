@@ -1,4 +1,3 @@
-
 import "./topbar.scss"
 
 export default function Topbar() {
