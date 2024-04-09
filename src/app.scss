@@ -12,7 +12,7 @@
         scroll-snap-type: y mandatory;
        
         &::-webkit-scrollbar{
-            display: yes;
+            display: none;
         }
 
         > *{
