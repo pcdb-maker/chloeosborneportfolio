@@ -1,5 +1,5 @@
 import "./topbar.scss"
-import { FaLocationArrow } from "react-icons/fa";
+import { FaLocationArrow, FaMailBulk } from "react-icons/fa";
 
 
 
@@ -11,6 +11,12 @@ export default function Topbar() {
       <a href="#intro" className="logo">Chloe O.</a>
       <div className="itemContainer">
         <FaLocationArrow  className="icon"/>
+       
+        <span>Location: Melbourne, VIC</span>
+      </div>
+
+      <div className="itemContainer">
+        <FaMailBulk   className="icon"/>
        
         <span>Location: Melbourne, VIC</span>
       </div>
