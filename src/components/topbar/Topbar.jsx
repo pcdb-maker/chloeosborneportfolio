@@ -1,5 +1,5 @@
 import "./topbar.scss"
-import { IconName } from "react-icons/fa";
+import { FaLocationArrow } from "react-icons/fa";
 
 
 
@@ -9,7 +9,12 @@ export default function Topbar() {
      <div className = "wrapper">
      <div className = "left">
       <a href="#intro" className="logo">Chloe O.</a>
-     
+      <div className="itemContainer">
+        <FaLocationArrow  className="icon"/>
+       
+        <span>Location: Melbourne, VIC</span>
+      </div>
+  
        
       <span> Full Stack Web Developer </span>
       
