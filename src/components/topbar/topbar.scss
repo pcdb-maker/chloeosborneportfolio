@@ -10,6 +10,10 @@
     z-index: 3;
     transition: all 1s ease;
 
+    &::-webkit-scrollbar{
+        display: none; //add this to remove the scrollbar from the main section. Add this to the 
+    }
+
 .wrapper{
     padding:10px 30px ;
     display: flex;
@@ -29,3 +33,4 @@
 }
 
 }
+
