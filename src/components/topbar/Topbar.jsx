@@ -9,6 +9,9 @@ export default function Topbar() {
      <div className = "wrapper">
      <div className = "left">
       <a href="#intro" className="logo">Chloe O.</a>
+
+
+      
       <div className="itemContainer">
         <FaLocationArrow  className="icon"/>
        
@@ -22,13 +25,19 @@ export default function Topbar() {
       </div>
   
        
-      <span> Full Stack Web Developer </span>
       
       
       </div>
 
 
-<div className="right"></div>
+<div className="right">
+  <div className="hamburger">
+<span className="line1"></span>
+<span className="line2"></span>
+<span className="line3"></span>
+
+  </div>
+</div>
 
      </div>
       
