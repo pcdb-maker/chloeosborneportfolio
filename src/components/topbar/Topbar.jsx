@@ -1,5 +1,6 @@
 import "./topbar.scss"
-import { Face3,Mail } from "@mui/icons-material"
+import { IconName } from "react-icons/fa";
+
 
 
 export default function Topbar() {
@@ -8,11 +9,10 @@ export default function Topbar() {
      <div className = "wrapper">
      <div className = "left">
       <a href="#intro" className="logo">Chloe O.</a>
-      <div className="itemContainer">
-        <Face3 className="icon"/>
-
+     
+       
       <span> Full Stack Web Developer </span>
-      </div>
+      
       
       </div>
 
