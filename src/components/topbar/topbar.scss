@@ -2,23 +2,21 @@
 
 .topbar {
     width: 100%;
-    height: 70px;
+    height: 100px;
     background-color: $mainColor;
     color: black;
     position: fixed;
     top: 0;
     z-index: 3;
     transition: all 1s ease;
-
-    &::-webkit-scrollbar{
-        display: none; //add this to remove the scrollbar from the main section. Add this to the 
-        }
+   
 
     .wrapper{
     padding:10px 30px ;
     display: flex;
     align-items: center ;
     justify-content: space-between;
+      
 
     .left   {
         display: flex;
@@ -35,7 +33,6 @@
             display: flex;
             align-items: center;
             margin-left: 100px;
-
 
         .icon   {
             font-size: 18px;
@@ -57,16 +54,44 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
+        
+            &::-webkit-scrollbar{
+                display: none; //add this to remove the scrollbar from the main section. Add this to the 
+            }
+      
 
 
     span        {
     width: 100%;
     height: 4px;
     background-color: black;
+    transform-origin: left;
     
                 }
             }
         }
     }
+
+        &.active{   
+            background-color: wheat;
+            color: darkblue;
+
+            .hamburger{
+            span{
+                &:first-child{
+                    background-color: green;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:last-child{
+                    background-color: green;
+                }
+            }
+            
+        }
+
 }
 
+}

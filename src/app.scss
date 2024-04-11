@@ -11,7 +11,9 @@
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
        
-       
+        &::-webkit-scrollbar{
+            display: none; //add this to remove the scrollbar from the main section. Add this to the 
+            }
         
 
         > *{
