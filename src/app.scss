@@ -1,8 +1,7 @@
-
-.app{
+.app {
     height: 100vh;
 
-    .sections{
+    .sections {
         width: 100%;
         height: calc(100vh - 70px);
         background-color: lightsalmon;
@@ -10,13 +9,13 @@
         top: 70px;
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
-       
-        &::-webkit-scrollbar{
-            display: none; //add this to remove the scrollbar from the main section. Add this to the 
-            }
-        
 
-        > *{
+        &::-webkit-scrollbar {
+            display: none; //add this to remove the scrollbar from the main section. Add this to the 
+        }
+
+
+        >* {
             width: 100vw;
             height: calc(100vh - 70px);
             scroll-snap-align: start;
