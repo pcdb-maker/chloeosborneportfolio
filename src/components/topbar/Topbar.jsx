@@ -5,7 +5,7 @@ import { FaLocationArrow, FaMailBulk } from "react-icons/fa";
 
 export default function Topbar() {
   return (
-    <div className="topbar">
+    <div className="topbar active">
      <div className = "wrapper">
      <div className = "left">
       <a href="#intro" className="logo">Chloe O.</a>
