@@ -1,11 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./portfolio.scss"
 import PortfolioList from '../portfolioList/PortfolioList';
+import {
+  featuredPortfolio,
+  webPortfolio,
+  mobilePortfolio,
+  designPortfolio,
+  contentPortfolio,
+} from "../../data";
 
 export default function Portfolio() {
-  const [selected, setSelected] = useState ("web")
+  const [selected, setSelected] = useState ("featured");
+  const [data, setData] = useState ([]);
  
   const list = [
+    {
+      id: "featured",
+      title: "Featured",
+    },
     {
       id: "web",
       title: "Web Applications",
@@ -33,6 +45,39 @@ export default function Portfolio() {
     },
   ];
 
+  useEffect (()=> {
+
+    switch(selected){
+
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+
+        case "web":
+        setData( webPortfolio);
+        break;
+
+        case "digital":
+        setData(mobilePortfolio);
+        break;
+
+        case "design":
+        setData(designPortfolio);
+        break;
+
+
+        case "art":
+        setData(contentPortfolio);
+        break;
+
+
+        default:
+        setData(featuredPortfolio);
+        
+    }
+
+  }, [selected]);
+
 
   return (
     <div className="portfolio" id="portfolio">
@@ -48,42 +93,18 @@ export default function Portfolio() {
         ))}
       </ul>
 
-
+    
       <div className="container">
-        <div className="item">
-          <img src="\assests\down.png" alt='' />
-          <h3>Banking App</h3>
-        </div>
-
-        <div className="item">
-          <img src="\assests\down.png" alt='' />
-          <h3>Banking App</h3>
-        </div>
-
-        <div className="item">
-          <img src="\assests\down.png" alt='' />
-          <h3>Banking App</h3>
-        </div>
-
-        <div className="item">
-          <img src="\assests\down.png" alt='' />
-          <h3>Banking App</h3>
-        </div>
-
-        <div className="item">
-          <img src="\assests\down.png" alt='' />
-          <h3>Banking App</h3>
-        </div>
-
-        <div className="item">
-          <img src="\assests\down.png" alt='' />
-          <h3>Banking App</h3>
-        </div>
-
-
+        {data.map((d) => (
+          <div className="item">
+            <img
+              src={d.img}
+              alt=""
+            />
+            <h3>{d.title}</h3>
+          </div>
+        ))}
       </div>
-
     </div>
-  )
+  );
 }
-
