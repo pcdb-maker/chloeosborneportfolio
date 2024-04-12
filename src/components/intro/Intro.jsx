@@ -10,7 +10,7 @@ export default function Intro() {
       showCursor: true,
       backDelay: 1500,
       backSpeed:60,
-      strings: ["Web Developer", "UX/UI Designer", "Digital Interaction Specialist", "Digital Artist"],
+      strings: ["Full Stack Web Developer", "UX/UI Designer", "Digital Interaction Specialist", "Digital Artist"],
     });
   }, []);
 
