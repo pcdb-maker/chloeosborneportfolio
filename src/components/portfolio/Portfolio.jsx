@@ -81,7 +81,8 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+       <h1>Portfolio</h1>
+      
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -91,8 +92,9 @@ export default function Portfolio() {
             id={item.id}
           />
         ))}
+        
       </ul>
-
+     
     
       <div className="container">
         {data.map((d) => (
