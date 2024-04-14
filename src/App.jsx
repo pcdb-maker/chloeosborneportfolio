@@ -5,6 +5,7 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Education from "./components/education/Education";
 import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 import "./app.scss"
 import { useState } from "react";
 
@@ -25,6 +26,8 @@ function App() {
       <Skills/>
       
       <Contact/>
+
+      <Footer/>
 
     
 
