@@ -1,7 +1,7 @@
 export const featuredPortfolio = [
     {
       id: 1,
-      title: <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>,
+      title: <a href="https://www.w3schools.com/" target="_blank" rel="noreferrer">Visit W3Schools!</a>,
       img:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
     },
