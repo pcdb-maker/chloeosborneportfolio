@@ -2,8 +2,8 @@ import Topbar from "./components/topbar/Topbar";
 import Menu from "./components/menu/Menu";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
+import Education from "./components/education/Education";
 import Skills from "./components/skills/Skills";
-import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import "./app.scss"
 import { useState } from "react";
@@ -20,9 +20,9 @@ function App() {
      
       <Portfolio/>
       
-      <Skills/>
+      <Education/>
       
-      <Testimonials/>
+      <Skills/>
       
       <Contact/>
 

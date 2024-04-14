@@ -90,6 +90,7 @@ export default function Portfolio() {
             active={selected === item.id}
             setSelected={setSelected}
             id={item.id}
+            link={item.link}
           />
         ))}
         

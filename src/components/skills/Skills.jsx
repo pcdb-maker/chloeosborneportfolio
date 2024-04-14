@@ -1,108 +1,113 @@
-import { useState } from "react";
-import "./skills.scss";
-
+import React, { useEffect, useState } from 'react'
+import "./skills.scss"
+import SkillsList from '../skillsList/SkillsList';
+import {
+  featuredPortfolio,
+  webPortfolio,
+  mobilePortfolio,
+  designPortfolio,
+  contentPortfolio,
+} from "../../data_skills";
 
 export default function Skills() {
-  
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  
-  
-  const data = [
-    
+  const [selected, setSelected] = useState ("featured");
+  const [data, setData] = useState ([]);
+ 
+  const list = [
     {
-    
-      id: "1",
-      //eslint-disable-next-line
-      icon: ".\assets\mobile.png",
-      title: "Web Design",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
-      img:
-        "https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930",
+      id: "featured",
+      title: "Featured",
     },
     {
-      
-      id: "2",
-      //eslint-disable-next-line
-      icon: ".\assets\globe.png",
+      id: "web",
+      title: "Web Applications",
+    },
+    {
+      id: "mobile",
       title: "Mobile Application",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img:
-        "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
     },
     {
-      id: "3",
-      //eslint-disable-next-line
-      icon: ".\assets\writing.png",
-      title: "Branding",
-      desc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      img:
-        "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+      id: "digital",
+      title: "Digital Presence Optimization",
+    },
+    {
+      id: "design",
+      title: "Graphic Design",
+    },
+    {
+      id: "art",
+      title: "Digital Art",
+    },
+
+    {
+      id: "games",
+      title: "Art",
     },
   ];
 
-  
-  const handleClick = (way) => {
-    way === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
-      : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
-  };
-  
+  useEffect (()=> {
+
+    switch(selected){
+
+      case "featured":
+        setData(featuredPortfolio);
+        break;
+
+        case "web":
+        setData( webPortfolio);
+        break;
+
+        case "digital":
+        setData(mobilePortfolio);
+        break;
+
+        case "design":
+        setData(designPortfolio);
+        break;
+
+
+        case "art":
+        setData(contentPortfolio);
+        break;
+
+
+        default:
+        setData(featuredPortfolio);
+        
+    }
+
+  }, [selected]);
+
+
   return (
     <div className="skills" id="skills">
-     <h1> &nbsp; Resume</h1>
-      <div
-        className="slider"
+       <h1>Skills</h1>
+      
+      <ul>
+        {list.map((item) => (
+          <SkillsList
+            title={item.title}
+            active={selected === item.id}
+            setSelected={setSelected}
+            id={item.id}
+            
+          />
+        ))}
         
-        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
-      >
-        
+      </ul>
+     
+    
+      <div className="container">
         {data.map((d) => (
-          
-          <div className="container">
-            
-             
-            <div className="item">
-            
-              <div className="left">
-              
-                <div className="leftContainer">
-                
-                  <div className="imgContainer">
-                    <img src={d.icon} alt="" />
-                  </div>
-                  <h2>{d.title}</h2>
-                  <p>{d.desc}</p>
-                  <span>Projects</span>
-                </div>
-              </div>
-              <div className="right">
-                <img
-                  src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/attachment_100040756-e1538485934255.jpeg?auto=format&q=60&fit=max&w=930"
-                  alt=""
-                />
-              </div>
-            </div>
+          <div className="item">
+            <img
+              src={d.img}
+              alt=""
+            />
+            <h3>{d.title}</h3>
           </div>
         ))}
       </div>
-      
-      <img
-        src="\assests\arrow.png"
-        className="arrow left"
-        alt=""
-        onClick={() => handleClick("left")}
-      />
-      
-      <img
-        src="\assests\arrow.png"
-        className="arrow right"
-        alt=""
-        onClick={() => handleClick()}
-      />
     </div>
   );
 }

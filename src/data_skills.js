@@ -1,15 +1,18 @@
 export const featuredPortfolio = [
     {
       id: 1,
-      title: <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>,
+      title: "Social Media App",
       img:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU",
+
+        link:<a target="_blank" href="https://www.freecodecamp.org/"></a>
     },
     {
       id: 2,
       title: "Rampa UI Design",
       img:
         "https://cdn.dribbble.com/users/702789/screenshots/15054318/media/4ea5d492b7b07eebc9528ff960794879.png?compress=1&resize=1200x900",
+        
     },
     {
       id: 3,

@@ -1,146 +1,79 @@
 @import "../../global.scss";
 
 .skills {
-  background-color: crimson;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding-top: 10px; //Move the top text down
-  
-
-  h1 {
-
-    font-size: 60px;
-    padding-bottom: 1000px;
-    margin-right: 50px; // Moves the "Resume" title text to a more appropiate postion
-
-    
-    
-
-}
-
-  .arrow {
-    height: 50px;
-    padding-right: 30px;
-    position: absolute;
-    cursor: pointer;
-    overflow: hidden;
-
-    &.left {
-      left: 100px;
-      transform: rotateY(180deg);
-    
-    }
-
-    &.right {
-      right: 100px;
-      
-    }
-  }
-
-  .slider {
-    height: 650px;
+    background-color: white;
     display: flex;
-    position: absolute;
-    left: 0;
-    transition: all 1s ease-out;
+    flex-direction: column;
     align-items: center;
-    
-   
+
+
+    h1 {
+
+        font-size: 60px;
+        padding-top: 40px;
+
+    }
+
+    ul {
+        margin: 100px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+
+
+
+    }
 
     .container {
-        width: 100vw;
+        width: 70%;
         display: flex;
         align-items: center;
         justify-content: center;
-      
+        flex-wrap: wrap;
 
-      .item {
-        width: 600px;
-        height: 100%;
-        background-color: white;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        
-        
-        
 
-        .left {
-          flex: 4;
-          height: 80%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          
-          ;
 
-          .leftContainer {
-            width: 90%;
-            height: 70%;
+        .item {
+            width: 350px;
+            height: 350px;
+            border-radius: 20px;
+            border: 1px solid rgb(240, 239, 239);
+            margin: 10px 20px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            
-            
-
-            .imgContainer {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              background-color: rgb(245, 179, 155);
-              display: flex;
-              align-items: center;
-              
-              
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            transition: all .5s ease;
+            cursor: pointer;
 
 
-              img {
-                width: 25px;
-                
 
-
-              }
-            }
-            h2 {
-              font-size: 20px;
-              
+            h3 {
+                position: absolute;
+                font-size: 20px;
 
             }
 
-          
-            p {
-              font-size: 13px;
-              
-              
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+
             }
-            span {
-              font-size: 12px;
-              font-weight: 600;
-              text-decoration: underline;
-              cursor: pointer;
-              
+
+            &:hover {
+                background-color: grey;
+
+                img {
+                    opacity: 0.2;
+                    z-index: 0;
+                }
             }
-          }
+
+
         }
-        .right {
-          flex: 8;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
 
-          
-
-          img {
-            width: 400px;
-            
-            
-          }
-        }
-      }
     }
-  }
 }
