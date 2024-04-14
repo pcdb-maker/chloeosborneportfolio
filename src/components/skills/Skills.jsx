@@ -1,8 +1,8 @@
 import { useState } from "react";
-import "./works.scss";
+import "./skills.scss";
 
 
-export default function Works() {
+export default function Skills() {
   
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -52,7 +52,7 @@ export default function Works() {
   };
   
   return (
-    <div className="works" id="works">
+    <div className="skills" id="skills">
      <h1> &nbsp; Resume</h1>
       <div
         className="slider"
