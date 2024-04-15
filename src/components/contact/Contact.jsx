@@ -5,10 +5,7 @@ import emailjs from '@emailjs/browser';
 export default function Contact() {
   const [message, setMessage] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage(true);
-  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -20,10 +17,10 @@ export default function Contact() {
       })
       .then(
         () => {
-          console.log('Message sent');
+          alert('Message sent');
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          alert('FAILED...', error.text);
         },
       );
   };
@@ -40,24 +37,16 @@ export default function Contact() {
         <h2>Contact.</h2>
 
         <form ref={form} onSubmit={sendEmail}>
+          
       <label>Name</label>
-      <input type="text" name="user_name" />
+      <input type="text" placeholder="Name..." name="user_name" required />
       <label>Email</label>
-      <input type="email" name="user_email" />
+      <input type="email" placeholder="Email..." name="user_email" required/>
       <label>Message</label>
-      <textarea name="message" />
+      <textarea name="message" placeholder="Message..." required />
       <input type="submit" value="Send" />
     </form>
 
-
-
-
-        {/* <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
-          <button type="submit">Send</button>
-          {message && <span>Thanks, I'll reply ASAP :)</span>}
-        </form> */}
       </div>
     </div>
   );
