@@ -1,7 +1,6 @@
 import "./contact.scss";
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import ReactDOM from 'react-dom'
 import { SocialIcon } from 'react-social-icons'
 
 export default function Contact() {
