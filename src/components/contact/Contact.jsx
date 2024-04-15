@@ -1,9 +1,12 @@
 import "./contact.scss";
-import React, { useRef,useState } from 'react';
+import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import ReactDOM from 'react-dom'
+import { SocialIcon } from 'react-social-icons'
 
 export default function Contact() {
-  const [message, setMessage] = useState(false);
+  
+  
 
 
   const form = useRef();
@@ -17,7 +20,7 @@ export default function Contact() {
       })
       .then(
         () => {
-          alert('Message sent');
+          alert('Message succesfuly sent! Thank you for contacting me. I will endevour to return your message as soon as possible. :)');
         },
         (error) => {
           alert('FAILED...', error.text);
@@ -34,7 +37,7 @@ export default function Contact() {
        
       </div>
       <div className="right">
-        <h2>Contact.</h2>
+        <h1>Contact.</h1>
 
         <form ref={form} onSubmit={sendEmail}>
           
@@ -44,10 +47,24 @@ export default function Contact() {
       <input type="email" placeholder="Email..." name="user_email" required/>
       <label>Message</label>
       <textarea name="message" placeholder="Message..." required />
+      <button name="message" placeholder="Message..." required />
+      
+      <button input type="submit" value="Send" placeholder="Send" />
       <input type="submit" value="Send" />
     </form>
 
-      </div>
-    </div>
+    <div className="socialIcon1">
+    <SocialIcon aria-label="my video channel" url="https://vimeo.com/535511325" target="_blank" rel="noreferrer"/>
+    <SocialIcon aria-label="my video channel" url="https://github.com/pcdb-maker" target="_blank" rel="noreferrer"/>
+    <SocialIcon aria-label="my video channel" url="https://github.com/pcdb-maker" target="_blank" rel="noreferrer"/>
+
+</div>
+
+</div>
+
+</div>
+
+    
+
   );
 }
