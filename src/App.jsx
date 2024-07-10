@@ -7,7 +7,7 @@ import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
 
 import "./app.scss"
-import { useState } from "react";
+import { useState } from "react"; 
 
 
 function App() {
